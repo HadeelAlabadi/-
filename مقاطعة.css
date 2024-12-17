@@ -1,0 +1,338 @@
+/* Set margins and padding to zero for all elements */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main view section settings */
+.view_main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    margin: -60px 100px 0 100px;
+    height: auto;
+}
+
+/* Hide view wrap by default */
+.view_wrap {
+    display: none;
+}
+
+/* Grid view settings */
+.view_wrap.grid-view {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* List view settings */
+.view_wrap.list-view {
+    display: block;
+}
+
+/* Individual view item settings */
+.view_item {
+    position: relative;
+    display: flex;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+/* Image settings for view items */
+.view_item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay settings for view items */
+.view_item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('Forbidden.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Overlay effect on hover */
+.view_item:hover .overlay {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+/* Links section settings */
+.links {
+    display: flex;
+    background-color: aliceblue;
+    margin: 40px 100px 100px 100px;
+    font-size: large;
+}
+
+/* Links list settings */
+.links ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Individual link item settings */
+.links ul li {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+/* Active link item effect */
+.links ul li.active {
+    transform: scale(1.3);
+    font-weight: 700;
+}
+
+/* Font Awesome icon settings */
+.fas {
+    color: blue;
+}
+
+/* Paragraph settings */
+p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Span element settings */
+span {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Alert section settings */
+.alert {
+    background-color: blanchedalmond;
+    margin: -80px 100px 80px 100px;
+    padding: 10px;
+    height: 60px;
+}
+
+/* Dropdown menu settings */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 410px;
+    align-content: center;
+}
+
+/* Stylish section settings */
+.STYLISH {
+    position: relative;
+    display: inline-block;
+    left: 390px;
+    align-content: center;
+}
+
+/* Stylish to-do list button settings */
+.STYLISH-TO-DO-LIST-button {
+    background-color: #3498db;
+    color: white;
+    padding: 7px 7px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Dropdown button settings */
+.dropdown-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 7px 7px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Dropdown content settings */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    width: 150px;
+    left: -100px;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for links inside dropdown content */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    font-weight: 800;
+}
+
+/* Remove bottom border for last link in dropdown */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* To-do list settings */
+.todo-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 80%;
+    position: relative;
+    left: 800px;
+    margin-top: -290px;
+    top: 300px;
+    display: none;
+}
+
+/* To-do list title settings */
+.todo-list h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* To-do list items settings */
+.todo-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual to-do list item settings */
+.todo-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hover effect for to-do list items */
+.todo-list li:hover {
+    background-color: #eaeaea;
+}
+
+/* Checkbox settings */
+input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+/* Icon before checkbox */
+input[type="checkbox"]::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Checkbox settings when checked */
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Icon before checkbox when checked */
+input[type="checkbox"]:checked::before {
+    color: #fff;
+    opacity: 1;
+}
+
+/* Label settings */
+label {
+    cursor: pointer;
+    flex: 1;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Add task section settings */
+.add-task {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Text input field for adding tasks */
+.add-task input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Button for adding tasks */
+.add-task button {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for add task button */
+.add-task button:hover {
+    background-color: #0b7dda;
+}
+
+/* Delete button settings */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for delete button */
+.delete-btn:hover {
+    color: #f00;
+}
